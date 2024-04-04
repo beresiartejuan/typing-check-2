@@ -19,7 +19,6 @@ export default function usePhrase(): PhraseInterface {
     const [phrase, setPhrase] = useState<string>("");
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [isError, setIsError] = useState<boolean>(false);
-    const [aux, setAux] = useState<boolean>(false);
 
     const getPhrases = async (): Promise<cite_type[]> => {
 
@@ -41,10 +40,12 @@ export default function usePhrase(): PhraseInterface {
     }
 
     const reload = () => {
-        setAux((prev) => !prev);
+        setPhrase("");
     }
 
     useEffect(() => {
+
+        if (phrase !== "") return;
 
         getPhrases()
             .then(cites => setPhrase(parsePhrases(cites)))
@@ -56,7 +57,7 @@ export default function usePhrase(): PhraseInterface {
                 setIsLoading(false);
             });
 
-    }, [aux]);
+    }, [phrase]);
 
     return [phrase, { isLoading, isError, reload }];
 
