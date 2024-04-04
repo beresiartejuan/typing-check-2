@@ -5,11 +5,21 @@ type cite_type = {
     cita: string;
 }
 
-export default function usePhrase(): [string, { isLoading: boolean, isError: boolean }] {
+type PhraseInterface = [
+    string,
+    {
+        isLoading: boolean,
+        isError: boolean,
+        reload: Function
+    }
+];
+
+export default function usePhrase(): PhraseInterface {
 
     const [phrase, setPhrase] = useState<string>("");
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [isError, setIsError] = useState<boolean>(false);
+    const [aux, setAux] = useState<boolean>(false);
 
     const getPhrases = async (): Promise<cite_type[]> => {
 
@@ -30,6 +40,10 @@ export default function usePhrase(): [string, { isLoading: boolean, isError: boo
 
     }
 
+    const reload = () => {
+        setAux((prev) => !prev);
+    }
+
     useEffect(() => {
 
         getPhrases()
@@ -42,8 +56,8 @@ export default function usePhrase(): [string, { isLoading: boolean, isError: boo
                 setIsLoading(false);
             });
 
-    }, []);
+    }, [aux]);
 
-    return [phrase, { isLoading, isError }];
+    return [phrase, { isLoading, isError, reload }];
 
 }
