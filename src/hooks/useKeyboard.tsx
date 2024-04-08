@@ -5,6 +5,7 @@ interface KeyboardInterface {
     history: string[];
     stopRecord: Function;
     startRecord: Function;
+    restoreHistory: Function;
     isRecording: boolean;
 }
 
@@ -16,11 +17,15 @@ interface history_action {
 
 type history_state = string[];
 
-
+const restore_history_code = "J_HISTORY";
 
 function historyReducer(state: history_state, action: history_action) {
 
     console.log(action)
+
+    if (action.code === restore_history_code && action.key === restore_history_code) {
+        return [];
+    }
 
     if (state.length === action.cursor) {
 
@@ -51,6 +56,15 @@ export default function useKeyboard(): KeyboardInterface {
         setEnable(false);
     }
 
+    const restoreHistory = () => {
+        setCursor(0);
+        updateHistory({
+            code: restore_history_code,
+            key: restore_history_code,
+            cursor
+        });
+    }
+
     const keyboard_hanlder = useCallback(
         function (params: { code: string, key: string }) {
 
@@ -69,9 +83,6 @@ export default function useKeyboard(): KeyboardInterface {
                 return (params.key === "Backspace") ? old_cursor - 1 : old_cursor + 1;
 
             });
-
-
-
         }
         , [setCursor, updateHistory, totalTyped]);
 
@@ -88,6 +99,6 @@ export default function useKeyboard(): KeyboardInterface {
 
     }, [keyboard_hanlder, enable]);
 
-    return { cursor, history, stopRecord, startRecord, isRecording: enable };
+    return { cursor, history, stopRecord, startRecord, isRecording: enable, restoreHistory };
 
 }
