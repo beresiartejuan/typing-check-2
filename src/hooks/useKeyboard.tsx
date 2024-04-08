@@ -5,7 +5,7 @@ interface KeyboardInterface {
     history: string[];
     stopRecord: Function;
     startRecord: Function;
-    recording: boolean;
+    isRecording: boolean;
 }
 
 interface history_action {
@@ -76,15 +76,6 @@ export default function useKeyboard(): KeyboardInterface {
         , [setCursor, updateHistory, totalTyped]);
 
     useEffect(() => {
-
-        const keep_state = ({ code }: { code: string }) => {
-            if (code === "Space" || code === "Enter" || code === "Intro") {
-                setEnable(!enable);
-            }
-        }
-
-        window.addEventListener("keydown", keep_state);
-
         if (enable) {
             window.addEventListener("keydown", keyboard_hanlder);
         } else {
@@ -93,11 +84,10 @@ export default function useKeyboard(): KeyboardInterface {
 
         return () => {
             window.removeEventListener("keydown", keyboard_hanlder);
-            window.removeEventListener("keydown", keep_state);
         }
 
     }, [keyboard_hanlder, enable]);
 
-    return { cursor, history, stopRecord, startRecord, recording: enable };
+    return { cursor, history, stopRecord, startRecord, isRecording: enable };
 
 }
