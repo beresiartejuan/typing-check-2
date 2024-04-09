@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply bg-slate-700 font-mono;
+}
+
+#root {
+    @apply min-w-max flex justify-center text-center mt-[15vh];
+}
+
+.with-cursor {
+    @apply border-l-2 border-solid border-white;
+}
+
+.correct-word {
+    @apply text-green-500;
+}
+
+.worng-word {
+    @apply text-red-500;
+}
+
+.correct-space {
+    @apply bg-green-500;
+}
+
+.worng-space {
+    @apply bg-red-500;
+}

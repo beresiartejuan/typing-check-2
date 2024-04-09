@@ -1,14 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-type TimerInterface = [
-    number,
-    {
-        start: Function,
-        stop: Function,
-        reset: Function
-    }
-]
-
 export default function useTimer(time: number): TimerInterface {
 
     const [counter, setCounter] = useState<number>(time);

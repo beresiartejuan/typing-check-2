@@ -1,19 +1,6 @@
 import { useEffect, useState } from "react";
 import getRandomElement from "../helpers/getRandomElement";
 
-type cite_type = {
-    cita: string;
-}
-
-type PhraseInterface = [
-    string,
-    {
-        isLoading: boolean,
-        isError: boolean,
-        reload: Function
-    }
-];
-
 export default function usePhrase(): PhraseInterface {
 
     const [phrase, setPhrase] = useState<string>("");

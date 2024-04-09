@@ -1,21 +1,17 @@
-import { useCallback, useEffect, useReducer, useRef, useState } from "react"
+import { useCallback, useEffect, useReducer, useState } from "react"
 
-interface KeyboardInterface {
-    cursor: number;
-    history: string[];
-    stopRecord: Function;
-    startRecord: Function;
-    restoreHistory: Function;
-    isRecording: boolean;
-}
-
-interface history_action {
-    code: string;
-    key: string;
-    cursor: number;
-}
-
-type history_state = string[];
+export const isKeyboardCodeAllowed = (code: string): boolean => {
+    return (
+        code.startsWith("Key") ||
+        code.startsWith("Digit") ||
+        code === "Backspace" ||
+        code === "Space" ||
+        code === "Period" ||
+        code === "Comma" ||
+        code === "Slash" ||
+        code === "Semicolon"
+    );
+};
 
 const restore_history_code = "J_HISTORY";
 
@@ -46,7 +42,6 @@ export default function useKeyboard(): KeyboardInterface {
     const [enable, setEnable] = useState<boolean>(false);
     const [cursor, setCursor] = useState<number>(0);
     const [history, updateHistory] = useReducer(historyReducer, []);
-    const totalTyped = useRef<number>(0);
 
     const startRecord = () => {
         setEnable(true);
@@ -68,9 +63,9 @@ export default function useKeyboard(): KeyboardInterface {
     const keyboard_hanlder = useCallback(
         function (params: { code: string, key: string }) {
 
-            console.log(params.code, params.key);
+            if (!isKeyboardCodeAllowed(params.code)) return;
 
-            totalTyped.current += 1;
+            console.log(params.code, params.key);
 
             setCursor(function (old_cursor): number {
 
@@ -84,7 +79,7 @@ export default function useKeyboard(): KeyboardInterface {
 
             });
         }
-        , [setCursor, updateHistory, totalTyped]);
+        , [setCursor, updateHistory]);
 
     useEffect(() => {
         if (enable) {
