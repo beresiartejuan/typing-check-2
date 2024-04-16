@@ -7,7 +7,7 @@ body {
 }
 
 #root {
-    @apply min-w-max flex justify-center text-center mt-[15vh];
+    @apply min-w-max flex flex-col place-items-center justify-center text-center mt-[15vh] gap-4;
 }
 
 .with-cursor {

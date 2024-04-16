@@ -1,31 +1,37 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import PrettyText from "./components/PrettyText";
+import Timer from "./components/Timer";
 import Title from "./components/Title"
-import useChecker from "./hooks/useChecker";
-import useKeyboard from "./hooks/useKeyboard";
-import usePhrase from "./hooks/usePhrase"
+import useApp, { AppState } from "./hooks/useApp";
+import InitialLabel from "./components/InitialLabel";
 
 function App() {
 
-    const [phrase, phraseConfig] = usePhrase();
-    const keyboard = useKeyboard();
-    const [checked_text] = useChecker(phrase, keyboard.history, keyboard.cursor);
+    const { start, app_state, authors, ...app } = useApp();
 
     useEffect(() => {
-
-        keyboard.startRecord();
+        window.addEventListener("keydown", start);
 
         return () => {
-            keyboard.stopRecord();
+            window.removeEventListener("keydown", start);
         }
-
-    }, [keyboard]);
+    }, [start]);
 
     return (
-        <div>
+        <>
             <Title title="<Typing-Check-2\>"></Title>
-            <PrettyText text={checked_text}></PrettyText>
-        </div>
+            <Timer seconds={app.time}></Timer>
+            <PrettyText text={app.checked_text}></PrettyText>
+            {
+                (app_state === AppState.READY) && <InitialLabel />
+            }
+            <div>
+                <h3 className="text-2xl font-bold text-green-700">- Autores -</h3>
+                {authors.map(author => {
+                    return <p className="text-gray-400 text-2xl text-center max-w-xl">{author}</p>
+                })}
+            </div>
+        </>
     )
 }
 

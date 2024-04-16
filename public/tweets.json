@@ -1,0 +1,152 @@
+[
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "tweet": "El individuo sólo tiene derecho a ser egoísta en lo que respecta a sí mismo; pero lo que es justo o injusto depende de las relaciones sociales."
+    },
+    {
+        "title": "El Principito",
+        "author": "Antoine de Saint-Exupéry",
+        "tweet": "Las personas grandes aman las cifras. Cuando les habláis de un nuevo amigo, no os interrogan jamás sobre lo esencial."
+    },
+    {
+        "author": "J.K. Rowling",
+        "title": "Harry Potter y la Piedra Filosofal",
+        "tweet": "Es curioso cómo en realidad son las cosas, ¿verdad? Raras veces ocurren como uno las espera."
+    },
+    {
+        "author": "Jane Austen",
+        "title": "Orgullo y Prejuicio",
+        "tweet": "La vanidad y el orgullo son cosas distintas, aunque las palabras se usen como sinónimos con frecuencia."
+    },
+    {
+        "author": "Paulo Coelho",
+        "title": "El Alquimista",
+        "tweet": "Cuando quieres realmente una cosa, todo el Universo conspira para ayudarte a conseguirla."
+    },
+    {
+        "author": "Gabriel García Márquez",
+        "title": "Cien años de soledad",
+        "tweet": "La vida no es la que uno vivió, sino la que uno recuerda, y cómo la recuerda para contarla."
+    },
+    {
+        "author": "Harper Lee",
+        "title": "Matar a un ruiseñor",
+        "tweet": "La gente generalmente ve lo que busca, y generalmente busca lo que puede ver."
+    },
+    {
+        "author": "Gabriel García Márquez",
+        "title": "Crónica de una muerte anunciada",
+        "tweet": "La vida no es sino una continua sucesión de oportunidades para sobrevivir."
+    },
+    {
+        "author": "Homero",
+        "title": "La Odisea",
+        "tweet": "Hay un tiempo para muchas palabras, y hay también un momento para callar."
+    },
+    {
+        "author": "León Tolstói",
+        "title": "Anna Karenina",
+        "tweet": "Todas las familias felices se parecen entre sí, pero cada familia infeliz lo es a su manera."
+    },
+    {
+        "author": "Oscar Wilde",
+        "title": "El Retrato de Dorian Gray",
+        "tweet": "La única forma de vencer una tentación es ceder ante ella."
+    },
+    {
+        "author": "Arthur Conan Doyle",
+        "title": "Las aventuras de Sherlock Holmes",
+        "tweet": "Lo imposible, lo improbable, es lo que nos intriga. Lo improbable, por definición, es lo que debemos investigar."
+    },
+    {
+        "author": "Victor Hugo",
+        "title": "Los miserables",
+        "tweet": "No hay nada como el sueño para crear el futuro. Utopía hoy, carne y hueso mañana."
+    },
+    {
+        "author": "Patrick Rothfuss",
+        "title": "El nombre del viento",
+        "tweet": "No temo a la muerte. Temo a lo que podría hacerme para evitarla."
+    },
+    {
+        "author": "Carlos Ruiz Zafón",
+        "title": "La Sombra del Viento",
+        "tweet": "Cada libro, cada tomo que ves, tiene alma. El alma de quien lo escribió, y el alma de quienes lo leyeron y vivieron y soñaron con él."
+    },
+    {
+        "author": "Gabriel García Márquez",
+        "title": "Cien años de soledad",
+        "tweet": "Muchos años después, frente al pelotón de fusilamiento, el coronel Aureliano Buendía había de recordar aquella tarde remota en que su padre lo llevó a conocer el hielo."
+    },
+    {
+        "author": "Jane Austen",
+        "title": "Orgullo y prejuicio",
+        "tweet": "Es una verdad universalmente reconocida que un hombre soltero, poseedor de una gran fortuna, necesita una esposa."
+    },
+    {
+        "author": "Gabriel García Márquez",
+        "title": "El amor en los tiempos del cólera",
+        "tweet": "Fue inevitable: el olor de las almendras amargas le recordó siempre el destino de los amores contrariados."
+    },
+    {
+        "author": "Julio Cortázar",
+        "title": "Rayuela",
+        "tweet": "Y después de todo, ¿qué es la literatura, sino el arte de hacer cosas con palabras?"
+    },
+    {
+        "author": "Gabriel García Márquez",
+        "title": "Crónica de una muerte anunciada",
+        "tweet": "La noche anterior, Santiago Nasar había soñado que atravesaba un bosque de higuerones donde caía una llovizna tierna."
+    },
+    {
+        "author": "George Orwell",
+        "title": "1984",
+        "tweet": "La libertad es el derecho a decirle a la gente lo que no quiere oír."
+    },
+    {
+        "author": "Franz Kafka",
+        "title": "La metamorfosis",
+        "tweet": "Al despertar Gregorio Samsa una mañana, tras un sueño intranquilo, se encontró en su cama convertido en un monstruoso insecto."
+    },
+    {
+        "author": "Herman Melville",
+        "title": "Moby Dick",
+        "tweet": "Llamadme Ismael. Hace algunos años -no importa cuántos exactamente- teniendo poco o ningún dinero en el bolsillo, y nada en particular que me interesara en tierra firme."
+    },
+    {
+        "author": "F. Scott Fitzgerald",
+        "title": "El gran Gatsby",
+        "tweet": "En mi juventud mis sueños estaban llenos de horizontes que parecían nunca terminar. Ahora, tengo edad suficiente para entender que eso es lo que los hace sueños."
+    },
+    {
+        "author": "Fyodor Dostoevsky",
+        "title": "Crimen y castigo",
+        "tweet": "¡Hasta el último suspiro de su vida, la humanidad no se reconciliará con la justicia!"
+    },
+    {
+        "author": "Leo Tolstoy",
+        "title": "Anna Karenina",
+        "tweet": "Todas las familias felices se parecen; pero cada familia desdichada tiene un motivo especial para sentirse desgraciada."
+    },
+    {
+        "author": "Carlos Ruiz Zafón",
+        "title": "El laberinto de los espíritus",
+        "tweet": "Cada libro, cada tomo que ves, tiene alma. El alma de quien lo escribió, y el alma de quienes lo leyeron y vivieron y soñaron con él."
+    },
+    {
+        "author": "Patrick Süskind",
+        "title": "El perfume",
+        "tweet": "No había un alma en el mundo, excepto él mismo, que conociera su aspecto. No tenía nada más que miedo."
+    },
+    {
+        "author": "Jorge Luis Borges",
+        "title": "El aleph",
+        "tweet": "Cualquier destino, por largo y complicado que sea, consta en realidad de un solo momento: el momento en que el hombre sabe para siempre quién es."
+    },
+    {
+        "author": "Carlos Ruiz Zafón",
+        "title": "La Sombra del Viento",
+        "tweet": "Un libro no es solo un montón de hojas impresas. Contiene el alma de quien lo escribió y el alma de quienes lo leyeron y vivieron y soñaron con él."
+    }
+]
