@@ -45,10 +45,6 @@ export default function useKeyboard(enable: boolean, limit: number): KeyboardInt
     );
 
     useEffect(() => {
-        console.log(limit, cursor, history)
-    }, [cursor, history, limit]);
-
-    useEffect(() => {
         window.addEventListener("keydown", keyboard_hanlder);
 
         return () => {
